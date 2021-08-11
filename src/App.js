@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import "./App.css";
+import { SearchBar } from "./components/searchBar";
+import LogoPic from './logo_transparent.png';
+
+const AppContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #2B3277;
+`;
+
+const Styleimg = {
+  marginTop: '.5em',
+  marginBottom: "2em", 
+  width: "200px",
+  height: "200px"
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+     <img src={LogoPic} style={Styleimg} alt="Logo" />
+      <SearchBar />
+    </AppContainer>
   );
 }
 
